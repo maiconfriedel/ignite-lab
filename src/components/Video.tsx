@@ -7,8 +7,6 @@ import {
 } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
 
-import "@vime/core/themes/default.css";
-
 const GET_LESSON_BY_SLUG_QUERY = gql`
   query getLessonBySlug($slug: String) {
     lesson(where: { slug: $slug }) {
@@ -47,11 +45,7 @@ export function Video(props: VideoProps) {
   });
 
   if (!data) {
-    return (
-      <div className="flex-1">
-        <p>Carregando</p>
-      </div>
-    );
+    return <div className="flex-1"></div>;
   }
 
   return (
