@@ -51,10 +51,11 @@ export function Video(props: VideoProps) {
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
-        <div className="h-full w-full max-w-[1280px] max-h-[60vh] aspect-video">
+        <div className="h-full w-full max-w-[1280px] max-h-[70vh] aspect-video">
           <iframe
-            width="1280"
-            height="720"
+            // width="1280"
+            // height="720"
+            className="h-full w-full max-w-[1280px] max-h-[70vh] aspect-video"
             src={`https://www.youtube.com/embed/${data.lesson.videoId}`}
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
