@@ -6,6 +6,7 @@ import {
   FileImage,
 } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
+import { useEffect } from "react";
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
   query getLessonBySlug($slug: String) {
@@ -47,6 +48,10 @@ export function Video(props: VideoProps) {
   if (!data) {
     return <div className="flex-1"></div>;
   }
+
+  useEffect(() => {
+    document.title = data.lesson.title;
+  }, [data]);
 
   return (
     <div className="flex-1">
