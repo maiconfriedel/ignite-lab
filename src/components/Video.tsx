@@ -5,7 +5,6 @@ import {
   Lightning,
   FileImage,
 } from "phosphor-react";
-import { useEffect } from "react";
 import { useGetLessonBySlugQuery } from "../graphql/schema";
 
 interface VideoProps {
